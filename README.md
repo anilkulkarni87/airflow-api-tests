@@ -10,6 +10,7 @@ This is a collection of Pytest for the 2.0 Stable Rest Apis for Apache Airflow. 
 ## 📝 Table of Contents
 
 - [About](#about)
+- [Uses](#uses)  
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Running the tests](#tests)
@@ -19,17 +20,40 @@ This is a collection of Pytest for the 2.0 Stable Rest Apis for Apache Airflow. 
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
+This repository will contain api calls to stable Airflow Rest apis. Having worked in airflow, I felt the lack of it. Come Airflow 2.0, it resolved the issues for me.
+It is also an attempt to understand api testing with python as I usually prefer Rest Assured (Java).  This is a WIP repo as I continue to build and add calls to all apis. 
+I have another repo which can help people setup airflow locally and then play around with these api.
+
+## Uses <a name="uses"></a>
+Listing out some reasons why I created this for myself:
+- Learn about airflow apis.
+- Learn about Python api testing.
+- Understand use cases of api and document for future needs.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
+Sequence of steps to be followed to be able to use this successfully:
+- Clone the [airflow-docker](https://github.com/anilkulkarni87/airflow-docker) repo.
+- Follow the instructions there to start running airflow locally.
+- Execute some DAGS that are part of my repo or create your own DAGS.
+- Start playing with the apis.
 
 ## 🎈 Usage <a name="usage"></a>
 
 ## 🔧 Running the tests <a name = "tests"></a>
+Here is an example of how you could run the tests. I will continue to evolve this
+```
+pytest test_dag.py
+```
 
 ## Github Workflow for running tests <a name="githubworkflow"></a>
-
+  I added this step for me to understand more about github workflows and how i can leverage it for this specific usecase. Essentially what I will have to do is within the workflow:
+- Clone airflow-docker repo
+- Start Airflow
+- Run these tests
+- Do something with the results
 
 ## ⛏️Airflow APIs <a name = "airflow_api"></a>
+I know you could get your hands on the swagger doc for these. But I still wanted to list down here.
 - [Get Config](tests/test_config.py)
     - This is usually forbidden from the administrator owing to security reasons.
 - [Connection](tests/test_connection.py)
