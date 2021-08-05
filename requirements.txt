@@ -1,0 +1,8 @@
+pytest
+requests
+responses
+pytest-pep8
+pytest-bdd
+pytest-sugar
+pytest-html
+psycopg2
